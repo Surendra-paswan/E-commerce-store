@@ -1,3 +1,4 @@
+import { ProductData } from "../utils/ProductData";
 import ProductCard from "./ProductCard";
 const Body = () => {
     return (
@@ -11,20 +12,16 @@ const Body = () => {
                 Search
             </div>
             <div className='flex flex-wrap justify-center gap-4 product-items'>
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                {ProductData.map((product) =>
+                <ProductCard
+                key={product.id}
+                title={product.title}
+                description={product.description}
+                price={product.price}
+                image={product.image}
+                category={product.category}
+                />
+                )}
             </div>
         </section>
     )
