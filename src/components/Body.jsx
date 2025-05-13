@@ -10,7 +10,8 @@ const Body = () => {
     };
     return (
         <section className="flex flex-col gap-4 px-2 py-2 ">
-            <div className="flex gap-3">
+            <div className="flex
+             gap-3">
                 <div className="flex items-center gap-2">
                     <input
                         type="text"
