@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className='bg-gray-800 text-gray-300 py-6'>
-    <div classNameName='container mx-auto text-center'>
+    <div className='container mx-auto text-center'>
       <p className='text-sm'>&copy; 2024 Your Company. All rights reserved.</p>
       <div className='flex justify-center mt-4 space-x-6'>
         <a href='#' className='text-gray-400 hover:text-gray-200'>

@@ -18,6 +18,7 @@ const ProductCard = ({ price, image, title, description, category }) => {
       </div>
       <h2 className='text-lg font-semibold text-gray-900 mt-2 truncate' title={title}>
         {title}
+        
       </h2>
       <p className='text-gray-600 text-sm line-clamp-2 min-h-[2.5em]'>{description}</p>
     </div>
