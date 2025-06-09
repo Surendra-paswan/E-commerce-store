@@ -1,5 +1,7 @@
-import React from 'react'
+// import React from 'react'
 import {LOGO_URL} from "../utils/constants"
+import { Link } from "react-router"
+
 
 
 const Navbar = () => {
@@ -11,21 +13,15 @@ const Navbar = () => {
           className='w-20 h-20'
         />
       </div>
-      <div className='flex justify-between list-none w-150 underline'>
+      <div className='flex justify-between list-none w-110 underline'>
         <li>
-          <a href=''>Home</a>
+          <Link to ='/'>Home</Link>
         </li>
         <li>
-          <a href=''>About</a>
+          <Link to='/about'>About</Link>
         </li>
         <li>
-          <a href="">Contact</a>
-        </li>
-        <li>
-          <a href="">Contect Us</a>
-        </li>
-        <li>
-          <a href="">Team</a>
+          <Link to='/Contact'>Contact</Link>
         </li>
       </div>
       <div>Cart</div>
