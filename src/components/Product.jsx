@@ -6,6 +6,13 @@ import ShimmerCard from "./ShimmerCard";
 const Product = () => {
   const { id } = useParams();
   const [productData, setProductData] = useState(null);
+  const [AddingCart, setAddCart] = useState([]);
+  
+  const AddToCart = () => {
+    AddingCart.push(productData);
+    console.log(AddingCart);
+  };
+
   useEffect(() => {
     const fetchProducts = async () => {
       const result = await fetch(`https://fakestoreapi.com/products/${id}`);
@@ -55,7 +62,10 @@ const Product = () => {
             ({productData.rating?.count} reviews)
           </span>
         </div>
-        <button className="mt-4 flex items-center justify-center gap-2 px-5 py-2 bg-blue-500 text-white rounded-lg font-medium text-base hover:bg-blue-600 transition-colors">
+        <button
+          className="mt-4 flex items-center justify-center gap-2 px-5 py-2 bg-blue-500 text-white rounded-lg font-medium text-base hover:bg-blue-600 transition-colors"
+          onClick={AddToCart}
+        >
           <FaCartPlus /> Add to Cart
         </button>
       </div>
